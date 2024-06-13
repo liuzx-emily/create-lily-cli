@@ -30,7 +30,6 @@ function installDeps(path) {
 function initGit(path) {
   const spawnOptions = { stdio: "inherit", cwd: path };
   spawn.sync("git init", spawnOptions);
-  spawn.sync("git config core.autocrlf false", spawnOptions); // 关闭换行符自动转换
   spawn.sync("git add .", spawnOptions);
   spawn.sync("git commit", ["-m", "init project"], spawnOptions);
 }
