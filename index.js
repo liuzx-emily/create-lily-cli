@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 import process from "process";
 import path from "path";
-import { cp } from "fs/promises";
+import { cp, writeFile } from "fs/promises";
 import spawn from "cross-spawn"; // 用法同 nodejs 内置的 child_process 模块，但解决了跨平台的兼容性问题
 import { fileURLToPath } from "url";
 import { dirname } from "path";
@@ -30,6 +30,7 @@ function installDeps(path) {
 function initGit(path) {
   const spawnOptions = { stdio: "inherit", cwd: path };
   spawn.sync("git init", spawnOptions);
+  writeFile(path.join(path, ".gitignore"), "node_modules");
   spawn.sync("git add .", spawnOptions);
   spawn.sync("git commit", ["-m", "init project"], spawnOptions);
 }

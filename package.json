@@ -5,9 +5,6 @@
   "homepage": "https://github.com/liuzx-emily/create-lily-cli",
   "type": "module",
   "bin": "./index.js",
-  "files": [
-    "template"
-  ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
