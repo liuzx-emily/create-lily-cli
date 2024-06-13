@@ -23,14 +23,14 @@ async function generateFiles(target_path) {
   await cp(src_path, target_path, { recursive: true }); // 将模板中的所有文件递归复制到目标路径
 }
 
-function installDeps(path) {
-  spawn.sync("pnpm i", { stdio: "inherit", cwd: path });
+function installDeps(dirPath) {
+  spawn.sync("pnpm i", { stdio: "inherit", cwd: dirPath });
 }
 
-function initGit(path) {
-  const spawnOptions = { stdio: "inherit", cwd: path };
+function initGit(dirPath) {
+  const spawnOptions = { stdio: "inherit", cwd: dirPath };
   spawn.sync("git init", spawnOptions);
-  writeFile(path.join(path, ".gitignore"), "node_modules");
+  writeFile(path.join(dirPath, ".gitignore"), "node_modules");
   spawn.sync("git add .", spawnOptions);
   spawn.sync("git commit", ["-m", "init project"], spawnOptions);
 }
