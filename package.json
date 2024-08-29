@@ -8,6 +8,9 @@
   "scripts": {
     "patch": "npm version patch && npm publish"
   },
+  "repository": {
+    "url": "https://github.com/liuzx-emily/create-lily-cli"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",

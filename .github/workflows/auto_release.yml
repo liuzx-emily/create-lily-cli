@@ -1,0 +1,21 @@
+name: Publish Package to npmjs
+
+on:
+  push:
+    branches: ["main"]
+
+  workflow_dispatch:
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest # 必需值。没有会报错：Required property is missing: runs-on
+    permissions:
+      id-token: write # publish with provenance 必须设置 id-token:write。普通 publish 不需要此权限
+    steps:
+      - uses: actions/checkout@v4 # 必需步骤
+      - uses: actions/setup-node@v4
+        with:
+          registry-url: "https://registry.npmjs.org" # publish 前必须设置 registry
+      - run: npm publish --provenance
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.npm_token }}
