@@ -1,6 +1,6 @@
 {
   "name": "create-lily-cli",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "vue2 project scaffold (pnpm + vite + vue2 + eslint)",
   "homepage": "https://github.com/liuzx-emily/create-lily-cli",
   "type": "module",
