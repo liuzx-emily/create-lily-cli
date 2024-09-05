@@ -2,9 +2,8 @@ name: Publish Package to npmjs
 
 on:
   push:
-    branches: ["main"]
-
-  workflow_dispatch:
+    tags:
+      - "v*" # 匹配以v开头的标签
 
 jobs:
   publish:

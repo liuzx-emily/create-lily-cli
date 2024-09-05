@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 import process from "process";
 import path from "path";
-import { cp, writeFile, rename, rm } from "fs/promises";
+import { cp, writeFile, rename } from "fs/promises";
 import spawn from "cross-spawn"; // 用法同 nodejs 内置的 child_process 模块，但解决了跨平台的兼容性问题
 import { fileURLToPath } from "url";
 import { dirname } from "path";
