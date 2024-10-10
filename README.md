@@ -8,7 +8,7 @@ vue2 项目脚手架 (pnpm + vite + vue2 + eslint)。
 ## Usage
 
 ```bash
-npm init lily-cli
+npm init lily-cli@latest
 ```
 
 ## 开发说明
