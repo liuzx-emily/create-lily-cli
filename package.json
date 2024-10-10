@@ -4,7 +4,7 @@
   "description": "vue2 project scaffold (pnpm + vite + vue2 + eslint)",
   "homepage": "https://github.com/liuzx-emily/create-lily-cli",
   "type": "module",
-  "bin": "./index.js",
+  "bin": "./bin/generator.js",
   "scripts": {
     "release": "node scripts/release.js"
   },
