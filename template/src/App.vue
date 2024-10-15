@@ -1,11 +1,12 @@
-<script setup>
-import { ref } from "vue";
-const message = ref("模板");
+<script lang="jsx" setup>
+import CompCounter from "./CompCounter.vue";
+import CompHello from "./CompHello";
 </script>
 
 <template>
   <section>
-    {{ message }}
+    <CompCounter :start="10" />
+    <CompHello name="emily" />
   </section>
 </template>
 

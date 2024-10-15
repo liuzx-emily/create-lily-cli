@@ -21,6 +21,7 @@
     "eslint": "9.x",
     "eslint-plugin-vue": "^9.26.0",
     "globals": "^15.4.0",
-    "sass": "^1.79.5"
+    "sass": "^1.79.5",
+    "@vitejs/plugin-vue2-jsx": "^1.1.1"
   }
 }
